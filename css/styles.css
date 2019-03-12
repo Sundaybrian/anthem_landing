@@ -1,6 +1,103 @@
-*{
-    padding:0;
-    margin: 0;
+* {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     box-sizing: border-box;
 }
+
+body,
+html {
+    background: #1e262c;
+    color: #fff;
+    font-size: 16px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+/* img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+} */
+
+
+header {
+    background-image: url("https://images8.alphacoders.com/926/thumb-1920-926642.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    border: red;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left:15px; 
+    height: 100vh;
+  
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
+    background: #1e262c;
+    opacity: .5;
+    min-height: 62px;
+    width: 100%;
+}
+
+nav li {
+    list-style: none;
+    display: inline-block;
+    /* line-height: 62px; */
+}
+
+nav li a {
+    text-decoration: none;
+    color:floralwhite;
+    display: block;
+    padding: 0px 20px;
+    font-size:14px;
+    font-weight:700;
+}
+
+.landing {
+    margin-top:65px;
+    margin-left: 15px;
+    margin-bottom:10px; 
+    display: flex;
+    flex-direction: row;
+}
+
+.landing  div{
+    display: flex;
+}
+
+
+.landing > div:nth-child(2){
+    border-left: 3px solid #fff;
+    /* background: #1e262c; */
+    margin-left:50px;
+    margin-right: 10px;
+    justify-content: center;
+    align-items: center;
+    width:70%;
+}
+
+.landing button{
+    width: 120px; 
+    height: 45px;
+    border-radius: 4px ;
+    border: 0;
+    background: #1e262c;
+    color: #fff;
+}
+
+
+.landing button:hover, .landing button:focus{
+    border: #fff;
+    border: 1px solid #ccc;
+    box-shadow:0px 0px 20px 2px  #fb3;
+}
+
