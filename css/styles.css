@@ -63,6 +63,10 @@ nav li a {
     text-transform: capitalize;
 }
 
+nav li a:hover, nav li a:focus{
+    border-bottom:2px solid #fb3;
+
+}
 .landing {
     margin-top: 125px;
     margin-left: 15px;
@@ -109,11 +113,14 @@ nav li a {
     padding: 10px;
     margin: 5px;
     background: #ccc;
+    /* background: #1e262c; */
 }
 
 section{
-    margin: 8px;
-    margin-top: 15px;
+    margin: 10px;
+    padding: 10px;
+    margin-bottom: 25px;
+   
 }
 
 #screen_shots {
@@ -122,6 +129,9 @@ section{
     white-space: nowrap; 
     overflow-x: scroll;
     overflow-y: hidden;
+    /* background: #ccc; */
+    width: 100%;
+
    
 }
 
@@ -143,10 +153,8 @@ section{
     background-attachment: fixed;
     background-size: cover;
     display: flex;
-    flex-direction: row;
-    padding: 10px;
-    /* background:#ccc; */
-    
+    flex-direction: row;    
+   
 }
 
 .content_left{
