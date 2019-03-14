@@ -1,6 +1,8 @@
 * {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   
     box-sizing: border-box;
+    font-family: 'Marvel', sans-serif;
+
 }
 
 body,
@@ -9,7 +11,6 @@ html {
     color: #fff;
     font-size: 16px;
     margin: 0 auto;
-
 }
 
 img {
@@ -20,7 +21,7 @@ img {
 
 
 header {
-    background-image: url("https://images7.alphacoders.com/926/926629.jpg");
+    background-image: url("https://images2.alphacoders.com/926/thumb-1920-926868.jpg");
     background-attachment: fixed;
     background-size: cover;
     width: 100%;
@@ -42,9 +43,10 @@ nav {
     justify-content: space-around;
     align-items: center;
     background: #1e262c;
-    opacity: .9;
+    /* opacity: .9; */
     min-height: 62px;
     width: 100%;
+    z-index: 1;
 }
 
 nav li {
@@ -54,6 +56,7 @@ nav li {
 }
 
 nav li a {
+    border-left: solid #04497e;
     text-decoration: none;
     color: floralwhite;
     display: block;
@@ -61,6 +64,14 @@ nav li a {
     font-size: 14px;
     font-weight: 700;
     text-transform: capitalize;
+}
+
+nav li a:hover,
+nav li a:focus {
+    border-bottom: 2px solid #fb3;
+    border-left: 0;
+
+
 }
 
 .landing {
@@ -78,7 +89,7 @@ nav li a {
 }
 
 
-.landing>div:nth-child(2) {
+.landing > div:nth-child(2) {
     border-left: 3px solid #fff;
     /* background: #1e262c; */
     margin-left: 50px;
@@ -105,27 +116,45 @@ nav li a {
     box-shadow: 0px 0px 20px 2px #fb3;
 }
 
-#main {
+
+
+section {
     padding: 10px;
-    margin: 5px;
+    width: 100%;
+    margin-left: 0;
+    padding-bottom: 25px;
+}
+
+section h2 {
+    text-align: center;
+    font-size:1.9em;
+
+}
+
+section li a,section p{
+    font-size:1.2em;
+}
+
+.grey {
     background: #ccc;
 }
 
-section{
-    margin: 8px;
-    margin-top: 15px;
-}
+
 
 #screen_shots {
     /* display: flex; */
-    justify-content: space-around;
-    white-space: nowrap; 
+    /* justify-content: space-around; */
+    white-space: nowrap;
     overflow-x: scroll;
     overflow-y: hidden;
-   
+    /* background: #ccc; */
+    width: 100%;
+
+
 }
 
-#screen_shots::-webkit-scrollbar { /* WebKit */
+#screen_shots::-webkit-scrollbar {
+    /* WebKit */
     display: none;
 }
 
@@ -133,50 +162,185 @@ section{
 #screen_shots .card {
     border: 1px solid #1e262c;
     display: inline-block;
-    max-width:320px;
-    /* margin: 0 0 0 auto; */
-/* https://images7.alphacoders.com/996/thumb-1920-996259.jpg */
+    max-width: 320px;
+    /* https://images7.alphacoders.com/996/thumb-1920-996259.jpg */
 }
 
-#exosuits{
-    background-image: url("https://images7.alphacoders.com/996/996259.jpg");
+#exosuits,#dangerous,#combat_ready {
+    background-image: url("https://images2.alphacoders.com/926/thumb-1920-926545.jpg");
     background-attachment: fixed;
     background-size: cover;
-    display: flex;
-    flex-direction: row;
-    padding: 10px;
-    /* background:#ccc; */
+    background-position: center;
+    display: grid;
+    grid-template-columns: 50% 2fr  ;
+    grid-column-gap:5px;
+    min-height: 80vh;
+    /* background: #1e262c; */   
+}
+
+
+.content_left {
+    display: grid;
+    align-items: center;
+    text-align: center;
+    color: #1e1e1e;
+    font-weight: 700;
+    padding:0 10px 0 10px;
+}
+
+.content_left h2{
+    color:#04497e;
+}
+
+.content_right {
+    animation-name: anthem_rain;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+
+
+@keyframes anthem_rain{
+    0%{
+        border-left: solid #fb3;
+       
+    }
+
+    25%{
+        border-left: solid #ccc;
+       
+    }
+
+    50%{
+        border-left: solid #04497e;
+    }
+
+    75%{
+        border-left: solid #05b413;
+    }
+
+    100%{
+        border-left: solid #da250d;
+    }
+}
+
+
+#javelin{
+    display:grid;
+    grid-template-rows: 1fr auto;
+    grid-row-gap: 5px;
+
+}
+
+#javelins{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 10px;
+    padding-bottom: 30px;
+}
+
+#javelins div{
+    position: relative;
+    border-radius: 8px;
+    background: #fff;
+    min-height: 320px;
     
 }
 
-.content_left{
-   border-left:#1e262c; 
-   display: flex;
-   align-items: center;
-   text-align: left;
-   justify-content: end;
-   opacity: .8;
-   width: 40%;
-   color: #fb3;
-   font-weight:700;
+
+#javelins div span{
+    position: absolute;
+    bottom: 0;
+    left:0;
+    height:30px;
+    background: #1e1e1e;
+    opacity: .8;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    border-top:solid #1e262c;
+    text-transform: capitalize;
+   
 }
 
-.content_right{
-    width: 60%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+#combat_ready{
+    background-image: url("https://images7.alphacoders.com/926/thumb-1920-926629.jpg");
+}
+
+#combat_ready .content_right {
+    display: grid;
     align-items: center;
-    justify-content: space-between;
-    opacity: .9;
-
-  
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    padding:0 10px 0 10px;
 }
 
-.content_right div{
-    max-width: 320px;
-    border:1px solid #1e262c;
+#combat_ready .content_right h2{
+    color:#04497e;
+}
 
-    /* align-self: center; */
+
+
+
+#desc_over_sys{
+    background: #1e262c;
+    display: grid;
+    grid-template-rows: repeat(3,auto);
+    grid-row-gap: 10px;    
+    opacity: .9;
+    
+}
+
+#desc_over_sys li{
+    list-style: square;
+    line-height: 1.8em;
+}
+
+#description,#overview,#system_requirements{
+    display: grid;
+    grid-template-rows: repeat(2,auto);
+    grid-gap: 10px;
+    background: rgb(4, 161, 161);
+    padding-bottom: 30px;
+    margin: 15px;
+    border: solid #fff;
+   
+}
+
+.desc_header h2{
+    text-transform: capitalize;
+    /* border-bottom: solid #fb3; */
+
+}
+
+.desc_content{
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    grid-column-gap: 10px;
+    /* line-height: 1.75; */
+    justify-self: center;
+    align-self: center;
+    
+    
+}
+
+.desc_content  .desc_right,.desc_content  .desc_left{
+    padding: 15px;
+}
+
+#dangerous{
+    background-image: url("https://images.alphacoders.com/926/thumb-1920-926628.jpg");
+    grid-template-columns: 2fr 50%   ;
+}
+
+#dangerous .content_right {
+    display: grid;
+    align-items: center;
+    text-align: center;
+    font-weight: 700;
+    padding:0 10px 0 10px;
 }
 
