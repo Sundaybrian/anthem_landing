@@ -20,7 +20,7 @@ img {
 
 
 header {
-    background-image: url("http://hdqwalls.com/download/2019-anthem-gb-3840x2160.jpg");
+    background-image: url("https://images.alphacoders.com/926/thumb-1920-926628.jpg");
     background-attachment: fixed;
     background-size: cover;
     width: 100%;
@@ -163,8 +163,9 @@ section h2 {
     background-image: url("https://images2.alphacoders.com/926/thumb-1920-926545.jpg");
     background-attachment: fixed;
     background-size: cover;
+    background-position: center;
     display: grid;
-    grid-template-columns: 40% 2fr  ;
+    grid-template-columns: 50% 2fr  ;
     grid-column-gap:5px;
     min-height: 80vh;
     /* background: #1e262c; */   
@@ -217,14 +218,45 @@ section h2 {
     }
 }
 
-.content_right div {
-    max-width: 320px;
-    /* border: 1px solid #1e262c; */
-    /* transform: skew(-19deg);
-    box-shadow: 10px 6px 1px 0px #fb3; */
-    /* border-top-left-radius:1,2; */
-    /* align-self: center; */
+
+#javelin{
+    display:grid;
+    grid-template-rows: 1fr auto;
+    grid-row-gap: 5px;
+
 }
+
+#javelins{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 10px;
+    padding-bottom: 30px;
+}
+
+#javelins div{
+    position: relative;
+    border-radius: 8px;
+    background: #fff;
+    min-height: 320px;
+    
+}
+
+#javelins div img{
+    
+}
+
+#javelins div span{
+    position: absolute;
+    bottom: 0;
+    left:0;
+    height:30px;
+    background: #1e1e1e;
+    opacity: .8;
+    text-align: center;
+    width: 100%;
+    color: #ec1f04;
+}
+
 
 #description{
     display: grid;
