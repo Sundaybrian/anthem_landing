@@ -47,7 +47,7 @@ nav {
     align-items: center;
     background: #1e262c;
     /* opacity: .9; */
-    min-height: 62px;
+    min-height: 72px;
     z-index: 1;
 }
 
@@ -188,7 +188,7 @@ section p {
     background-size: cover;
     background-position: center;
     display: grid;
-    grid-template-columns: 50% 2fr;
+    grid-template-columns: 50% auto;
     grid-column-gap: 5px;
     min-height: 80vh;
     /* background: #1e262c; */
@@ -206,6 +206,7 @@ section p {
 
 .content_left h2 {
     color: #04497e;
+    text-shadow: 1px 1px 4px #222;
 }
 
 .content_right {
@@ -296,6 +297,8 @@ section p {
 
 #combat_ready .content_right h2 {
     color: #04497e;
+    text-align: center;
+    text-shadow: 1px 1px 1px #222;
 }
 
 
@@ -478,7 +481,32 @@ form .submit>#submit_button {
     .landing div:nth-child(2){
         margin-top: 10px;
     }
+
+
+    section h2 {
+        text-align: left;
     
+    }
+    .content_left {
+        text-align: left;
+
+    }
+
+
+    #combat_ready {
+        background-image: url("https://images5.alphacoders.com/843/thumb-1920-843439.jpg");
+    }
+    
+    #combat_ready .content_right {
+        text-align: right;
+        /* color:#1e262c; */
+    }
+    
+    #combat_ready .content_right h2 {
+        text-align: right;
+        color: #da250d;
+        
+    }
 
 
 }
