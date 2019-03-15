@@ -94,7 +94,7 @@ nav li a:focus {
     /* width: 50%; */
 }
 
-.landing #header_img {
+.landing #header-img {
     max-width: 280px; 
     border-radius: 8px;
  
@@ -179,6 +179,7 @@ section p {
     max-width: 320px;
     /* https://images7.alphacoders.com/996/thumb-1920-996259.jpg */
 }
+
 
 #exosuits,
 #dangerous,
@@ -416,7 +417,7 @@ form .content-right>#email {
 
 }
 
-form .submit>#submit_button {
+form .submit_button>#submit {
     width: 30%;
     height: 40px;
     text-align: center;
