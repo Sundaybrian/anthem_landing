@@ -253,7 +253,7 @@ section p {
 
 #javelins {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit,minmax(300px,auto));
     grid-gap: 10px;
     padding-bottom: 30px;
 }
@@ -506,6 +506,10 @@ form .submit>#submit_button {
         text-align: right;
         color: #da250d;
         
+    }
+
+    section h2{
+        text-align: center;
     }
 
 
