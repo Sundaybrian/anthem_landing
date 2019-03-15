@@ -359,7 +359,7 @@ section p {
 
 #dangerous {
     background-image: url("https://images.alphacoders.com/926/thumb-1920-926628.jpg");
-    grid-template-columns: 2fr 50%;
+    grid-template-columns: repeat(auto-fit,minmax(300px,auto));
 }
 
 #dangerous .content_right {
@@ -478,9 +478,6 @@ form .submit>#submit_button {
 
 @media (max-width:514px) {
 
-    header{
-    
-    }
     .landing div:nth-child(2){
         margin-top: 10px;
     }
