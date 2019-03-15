@@ -307,51 +307,54 @@ section p {
 #desc_over_sys {
     background: #1e262c;
     display: grid;
-    grid-template-rows: repeat(3, auto);
+    grid-template-rows: 1fr 1fr 1fr;
     grid-row-gap: 10px;
     opacity: .9;
+    padding:30px 10px 30px 10px;
 
 }
 
 #desc_over_sys li {
     list-style: square;
-    line-height: 1.8em;
+    line-height: 1.5em;
 }
 
 #description,
 #overview,
 #system_requirements {
     display: grid;
-    grid-template-rows: repeat(2, auto);
-    grid-gap: 10px;
+    grid-template-rows: repeat(2,auto);
+    grid-row-gap: 5px;
     background: rgb(4, 161, 161);
-    padding-bottom: 30px;
-    margin: 15px;
-    border: solid #fff;
+    padding: 5px;
+
+    margin-top: 5px;
+    border: 2px solid #fff;
 
 }
 
 .desc_header h2 {
     text-transform: capitalize;
-    /* border-bottom: solid #fb3; */
+    border-bottom: solid #fff;
+    color: #fb3;
 
 }
 
 .desc_content {
-    padding: 10px;
+    padding-left: 5px;
     display: grid;
-    grid-template-columns: repeat(2, auto);
-    grid-column-gap: 10px;
+    grid-template-columns: repeat(auto-fit,minmax(280px,auto));
+    grid-column-gap: 5px;
     /* line-height: 1.75; */
-    justify-self: center;
-    align-self: center;
+    /* justify-self: center;
+    align-self: center; */
 
 
 }
 
 .desc_content .desc_right,
 .desc_content .desc_left {
-    padding: 15px;
+    /* padding: 15px; */
 }
 
 #dangerous {
@@ -511,6 +514,9 @@ form .submit>#submit_button {
     section h2{
         text-align: center;
     }
+
+
+    
 
 
 }
