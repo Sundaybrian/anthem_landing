@@ -1,5 +1,5 @@
 * {
-   
+
     box-sizing: border-box;
     font-family: 'Marvel', sans-serif;
 
@@ -11,6 +11,7 @@ html {
     color: #fff;
     font-size: 16px;
     margin: 0 auto;
+    min-width: 320px;
 }
 
 img {
@@ -26,9 +27,11 @@ header {
     background-size: cover;
     width: 100%;
     display: flex;
+    justify-content: center;
     flex-direction: column;
-    padding: 10px;
-    margin-top: 10px;
+    padding-left: 25px;
+    /* margin-top: 10px; */
+    min-width: 320px;
     height: 100vh;
 
 }
@@ -40,18 +43,18 @@ nav {
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     background: #1e262c;
     /* opacity: .9; */
     min-height: 62px;
-    width: 100%;
     z-index: 1;
 }
 
 nav li {
     list-style: none;
     display: inline-block;
+    
     /* line-height: 62px; */
 }
 
@@ -81,7 +84,6 @@ nav li a:focus {
     display: flex;
     flex-direction: row;
 
-
 }
 
 .landing div {
@@ -89,7 +91,7 @@ nav li a:focus {
 }
 
 
-.landing > div:nth-child(2) {
+.landing>div:nth-child(2) {
     border-left: 3px solid #fff;
     /* background: #1e262c; */
     margin-left: 50px;
@@ -127,12 +129,13 @@ section {
 
 section h2 {
     text-align: center;
-    font-size:1.9em;
+    font-size: 1.9em;
 
 }
 
-section li a,section p{
-    font-size:1.2em;
+section li a,
+section p {
+    font-size: 1.2em;
 }
 
 .grey {
@@ -166,16 +169,18 @@ section li a,section p{
     /* https://images7.alphacoders.com/996/thumb-1920-996259.jpg */
 }
 
-#exosuits,#dangerous,#combat_ready {
+#exosuits,
+#dangerous,
+#combat_ready {
     background-image: url("https://images2.alphacoders.com/926/thumb-1920-926545.jpg");
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
     display: grid;
-    grid-template-columns: 50% 2fr  ;
-    grid-column-gap:5px;
+    grid-template-columns: 50% 2fr;
+    grid-column-gap: 5px;
     min-height: 80vh;
-    /* background: #1e262c; */   
+    /* background: #1e262c; */
 }
 
 
@@ -185,11 +190,11 @@ section li a,section p{
     text-align: center;
     color: #1e1e1e;
     font-weight: 700;
-    padding:0 10px 0 10px;
+    padding: 0 10px 0 10px;
 }
 
-.content_left h2{
-    color:#04497e;
+.content_left h2 {
+    color: #04497e;
 }
 
 .content_right {
@@ -201,70 +206,71 @@ section li a,section p{
 }
 
 
-@keyframes anthem_rain{
-    0%{
+@keyframes anthem_rain {
+    0% {
         border-left: solid #fb3;
-       
+
     }
 
-    25%{
+    25% {
         border-left: solid #ccc;
-       
+
     }
 
-    50%{
+    50% {
         border-left: solid #04497e;
     }
 
-    75%{
+    75% {
         border-left: solid #05b413;
     }
 
-    100%{
+    100% {
         border-left: solid #da250d;
     }
 }
 
 
-#javelin{
-    display:grid;
+#javelin {
+    display: grid;
     grid-template-rows: 1fr auto;
     grid-row-gap: 5px;
+    padding-bottom: 90px;
 
 }
 
-#javelins{
+#javelins {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
     padding-bottom: 30px;
 }
 
-#javelins div{
+#javelins div {
     position: relative;
     border-radius: 8px;
     background: #fff;
     min-height: 320px;
-    
+
 }
 
 
-#javelins div span{
+#javelins div span {
     position: absolute;
     bottom: 0;
-    left:0;
-    height:30px;
+    left: 0;
+    height: 30px;
     background: #1e1e1e;
     opacity: .8;
     text-align: center;
     width: 100%;
     color: #fff;
-    border-top:solid #1e262c;
+    border-top: solid #1e262c;
     text-transform: capitalize;
-   
+
 }
 
-#combat_ready{
+#combat_ready {
     background-image: url("https://images7.alphacoders.com/926/thumb-1920-926629.jpg");
 }
 
@@ -274,66 +280,69 @@ section li a,section p{
     text-align: center;
     color: #fff;
     font-weight: 700;
-    padding:0 10px 0 10px;
+    padding: 0 10px 0 10px;
 }
 
-#combat_ready .content_right h2{
-    color:#04497e;
+#combat_ready .content_right h2 {
+    color: #04497e;
 }
 
 
 
 
-#desc_over_sys{
+#desc_over_sys {
     background: #1e262c;
     display: grid;
-    grid-template-rows: repeat(3,auto);
-    grid-row-gap: 10px;    
+    grid-template-rows: repeat(3, auto);
+    grid-row-gap: 10px;
     opacity: .9;
-    
+
 }
 
-#desc_over_sys li{
+#desc_over_sys li {
     list-style: square;
     line-height: 1.8em;
 }
 
-#description,#overview,#system_requirements{
+#description,
+#overview,
+#system_requirements {
     display: grid;
-    grid-template-rows: repeat(2,auto);
+    grid-template-rows: repeat(2, auto);
     grid-gap: 10px;
     background: rgb(4, 161, 161);
     padding-bottom: 30px;
     margin: 15px;
     border: solid #fff;
-   
+
 }
 
-.desc_header h2{
+.desc_header h2 {
     text-transform: capitalize;
     /* border-bottom: solid #fb3; */
 
 }
 
-.desc_content{
+.desc_content {
     padding: 10px;
     display: grid;
-    grid-template-columns: repeat(2,auto);
+    grid-template-columns: repeat(2, auto);
     grid-column-gap: 10px;
     /* line-height: 1.75; */
     justify-self: center;
     align-self: center;
-    
-    
+
+
 }
 
-.desc_content  .desc_right,.desc_content  .desc_left{
+.desc_content .desc_right,
+.desc_content .desc_left {
     padding: 15px;
 }
 
-#dangerous{
+#dangerous {
     background-image: url("https://images.alphacoders.com/926/thumb-1920-926628.jpg");
-    grid-template-columns: 2fr 50%   ;
+    grid-template-columns: 2fr 50%;
 }
 
 #dangerous .content_right {
@@ -341,7 +350,7 @@ section li a,section p{
     align-items: center;
     text-align: center;
     font-weight: 700;
-    padding:0 10px 0 10px;
+    padding: 0 10px 0 10px;
 }
 
 #dangerous .content_right #content {
@@ -350,7 +359,7 @@ section li a,section p{
     opacity: .7;
 }
 
-#dangerous .content_right #content:hover{
+#dangerous .content_right #content:hover {
     border: 1px solid #fff;
     opacity: .9;
     background: teal;
@@ -358,39 +367,39 @@ section li a,section p{
 
 
 #dangerous .content_right span {
-    color: #05b413;    
+    color: #05b413;
 }
 
-#dangerous form{
+#dangerous form {
     display: grid;
-    grid-template-rows: repeat(2,auto);
-    grid-row-gap:10px; 
-  
+    grid-template-rows: repeat(2, auto);
+    grid-row-gap: 10px;
+
 }
 
-#dangerous form .labels{
-    width: 100%;  
-    font-size:18px;
+#dangerous form .labels {
+    width: 100%;
+    font-size: 18px;
 }
 
-form .content-right > #email{
-  width: 80%;
-  height: 36px;
-  text-align: center;  
-  background: #1e262c;
-  font-size: 16px;
-  opacity: 1; 
-  border:2px solid #fff;
-  color: floralwhite;
-  
+form .content-right>#email {
+    width: 80%;
+    height: 36px;
+    text-align: center;
+    background: #1e262c;
+    font-size: 16px;
+    opacity: 1;
+    border: 2px solid #fff;
+    color: floralwhite;
+
 }
 
-::placeholder{
+::placeholder {
     color: #fff;
 
 }
 
-form .submit > #submit_button{
+form .submit>#submit_button {
     width: 30%;
     height: 40px;
     text-align: center;
@@ -399,24 +408,50 @@ form .submit > #submit_button{
     border-radius: 5px;
     background-color: #1e262c;
     opacity: .7;
-    border:1px solid #fff;
- 
+    border: 1px solid #fff;
+
 }
 
- #submit_button:hover,#submit_button:focus{
+#submit_button:hover,
+#submit_button:focus {
     opacity: 1;
-    border:3px solid #fff;
-    
- 
+    border: 3px solid #fff;
+
+
 }
-
-
-
-
-
-
-
-
 
 
 /* media queries */
+@media (max-width:913px) {
+
+
+    nav ul {
+        white-space: nowrap;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        width: 100%;
+    }
+
+    nav ul::-webkit-scrollbar {
+        /* WebKit */
+        display: none;
+    }
+
+
+
+
+}
+
+
+@media (max-width:786px) {
+    
+
+
+}
+
+
+
+  
+
+
+
